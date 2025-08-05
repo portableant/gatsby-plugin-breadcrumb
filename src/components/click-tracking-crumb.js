@@ -7,10 +7,10 @@ import { OptionsContext } from './options-context'
 import useBreadcrumb from './useBreadcrumb'
 
 const ClickTrackingCrumb = ({
-  title,
+  title = '',
   location,
   crumbLabel,
-  crumbSeparator,
+  crumbSeparator = ' / ',
   ...rest
 }) => {
   const { usePathPrefix } = React.useContext(OptionsContext)
@@ -53,11 +53,6 @@ const ClickTrackingCrumb = ({
       </nav>
     </>
   )
-}
-
-ClickTrackingCrumb.defaultProps = {
-  title: '',
-  crumbSeparator: ' / ',
 }
 
 ClickTrackingCrumb.propTypes = {

@@ -5,12 +5,12 @@ import Proptypes from 'prop-types'
 import { Link } from 'gatsby'
 
 const AutoGenCrumb = ({
-  title,
+  title = '',
   crumbs: autoGenCrumbs,
-  crumbLabel: crumbLabelOverride,
-  crumbSeparator,
-  disableLinks,
-  hiddenCrumbs,
+  crumbLabel: crumbLabelOverride = null,
+  crumbSeparator = ' / ',
+  disableLinks = [],
+  hiddenCrumbs = [],
   ...rest
 }) => (
   <>
@@ -61,14 +61,6 @@ const AutoGenCrumb = ({
     </nav>
   </>
 )
-
-AutoGenCrumb.defaultProps = {
-  title: '',
-  crumbSeparator: ' / ',
-  crumbLabel: null,
-  disableLinks: [],
-  hiddenCrumbs: [],
-}
 
 AutoGenCrumb.propTypes = {
   title: Proptypes.string,

@@ -23,11 +23,6 @@ export const OptionsProvider = ({
 
 export const OptionsConsumer = OptionsContext.Consumer
 
-OptionsProvider.defaultProps = {
-  useAutoGen: false,
-  usePathPrefix: null,
-}
-
 OptionsProvider.propTypes = {
   children: PropTypes.node.isRequired,
   useAutoGen: PropTypes.bool,
